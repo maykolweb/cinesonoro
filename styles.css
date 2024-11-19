@@ -1,0 +1,241 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('fondo-peliculas.png'); /* Añadir la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 1em;
+    display: flex; 
+    justify-content: space-between; /* Distribuir los elementos en el espacio */
+    align-items: center; /* Centrar verticalmente los elementos */
+    flex-wrap: wrap;
+}
+
+nav { 
+    display: flex; 
+    align-items: center; /* Centrar verticalmente los elementos del nav */ 
+    gap: 1em; /* Espacio entre los elementos del menú */ }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Usar flexbox para alinear los elementos */ 
+    gap: 1em; /* Espacio entre los elementos del menú */
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+    padding-bottom: 5px; /* Añadir padding para separar el texto del borde */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav button { 
+    margin-left: auto; /* Espacio entre el botón y los elementos anteriores */ 
+
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px; /* Altura del borde */
+    background: linear-gradient(to right, #4A00E0, #f06595); /* Degradado de colores */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Estilo para el logotipo */
+#logo {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    margin-right: 10px; /* Espacio entre el logo y el título */
+}
+
+/* Estilo para el TITULO */
+#titulo {
+    display: inline-block; /* Ajustar el borde al tamaño del contenido */
+    border: 2px solid #fff; /* Añadir un borde blanco */
+    padding: 10px; /* Añadir padding para separar el texto del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-right: auto; /* Alinear el título a la izquierda */
+}
+
+@media (max-width: 600px) { 
+    header { 
+        flex-direction: column; /* Cambiar la dirección a columna en pantallas pequeñas */ 
+        align-items: flex-start; /* Alinear los elementos al inicio en pantallas pequeñas */ 
+    } 
+        #logo { 
+            width: 40px; /* Ajustar el tamaño en pantallas pequeñas */ 
+            margin: 0 0 10px 0; /* Espacio debajo del logo en pantallas pequeñas */ 
+        } 
+
+        #titulo { 
+            padding: 5px; /* Ajustar el padding en pantallas pequeñas */ 
+            border: 1px solid #fff; /* Ajustar el borde en pantallas pequeñas */ 
+            margin-right: 0;
+        } 
+
+        nav ul { 
+            flex-direction: column; /* Disponer los elementos del menú en columna */ 
+            gap: 0.5em; /* Espacio entre los elementos del menú */ 
+        } 
+        
+        nav button { 
+            margin: 10px 0 0 0; /* Espacio encima del botón en pantallas pequeñas */ 
+        }
+}
+
+#destacado {
+    display: flex; /* Usar flexbox para alinear los div */
+    flex-wrap: wrap; /* Permitir que los div se envuelvan en múltiples líneas si es necesario */
+    justify-content: center; /* Centrar horizontalmente los div */
+    gap: 1em; /* Espacio entre los div */
+}
+
+#destacado .contenido {
+    flex: 1 1 calc(33.333% - 1em); /* Cada div ocupa un tercio del espacio disponible menos el gap */
+    box-sizing: border-box; /* Incluir el padding y borde en el tamaño total */
+}
+
+@media (max-width: 600px) {
+    #destacado .contenido {
+        flex: 1 1 100%; /* En pantallas más pequeñas, cada div ocupa el 100% del ancho */
+    }
+}
+
+/* SECCIONES FLASHCARD */
+
+.flashcard {
+    background: linear-gradient(135deg, #fc4a1a, #f7b733); /* Degradado de colores */
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.flashcard:hover {
+    transform: translateY(-10px);
+}
+
+.flashcard h3{
+    color:#141414
+}
+
+#flashcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre las secciones */
+}
+
+@media (max-width: 600px) {
+    .flashcard {
+        flex: 1 1 100%; /* Cada flashcard ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    #flashcards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/*-----------------------------------------------------*/
+/* Botones con colores degradados */ 
+.degradado { 
+    background: linear-gradient(45deg, #8E2DE2, #4A00E0); 
+    border: none; 
+    border-radius: 10px; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+    
+.degradado:hover { 
+    background: linear-gradient(45deg, #0575E6, #021B79); 
+}
+
+.degradado2 {
+    background: linear-gradient(45deg, #c31432, #240b36); 
+    border: none; 
+    border-radius: 10px; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+.degradado2:hover { 
+    background: linear-gradient(45deg, #FF416C, #FF4B2B); 
+}
+
+main {
+    margin-top: 2em;
+    width: 90%;
+}
+
+main h1{
+    #background: linear-gradient(to right, #4A00E0, #f06595);
+    color: #141414;
+}
+
+.contenido {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    nav ul li {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+
+    .contenido {
+        margin: 0.5em 0;
+    }
+}
+
+/* Estilos del footer */
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    padding: 1em;
+    margin-top: auto;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #bbb;
+}
+
+
