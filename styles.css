@@ -383,7 +383,7 @@ nav ul li::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('peli1.jpeg');
+  background: url('iroman.jpeg');
   background-size: cover;
   background-position: center;
   opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
@@ -397,7 +397,7 @@ nav ul li::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('peli4.jpeg');
+  background: url('titanic.jpeg');
   background-size: cover;
   background-position: center;
   opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
@@ -411,7 +411,7 @@ nav ul li::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('peli3.jpg');
+  background: url('matrix.jpeg');
   background-size: cover;
   background-position: center;
   opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
@@ -538,7 +538,12 @@ nav ul li::after {
   }
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
+section[id]{
+  scroll-margin-top:70px;
+}
 
 
 
