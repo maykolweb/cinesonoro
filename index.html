@@ -1,80 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CineSonoro</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <header>
-        <img src="oficial.png" alt="CineSonoro Logotipo" id="logo">
+        <img src="oficial-logo.png" alt="CineSonoro Logotipo" id="logo" />
         <h1 id="titulo">CineSonoro</h1>
-        
+
         <nav>
+            <!--MENU HAMBURGUESA PARA MOVILES-->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
             <ul>
                 <li><a href="#" tabindex="1">INICIO</a></li>
-                <li><a href="#" tabindex="2">PELÍCULAS</a></li>
-                <li><a href="#" tabindex="3">SERIES</a></li>
-                <li><a href="#" tabindex="4">SUSCRIPCIÓN</a></li>
-                
+                <li><a href="#" tabindex="2">SUSCRIPCIÓN</a></li>
+                <li><a href="#" tabindex="3">PELICULAS</a></li>
+                <li><a href="#" tabindex="4">SERIES</a></li>
             </ul>
-            <a href="#"><button class="degradado2" id="loginButton" tabindex="5">Registrarse</button></a>
-            <a href="sesion.html"><button class="degradado" id="loginButton" tabindex="5">Iniciar Sesión</button></a>
+            <a href="sesion.html"><button class="degradado" id="loginButton" tabindex="5">
+                    Iniciar Sesión
+                </button></a>
         </nav>
     </header>
     <main>
-        <h1><i class='bx bx-happy-heart-eyes'></i> Explora nuestro contenido</h1>
-        <!--1ERA SECCION-->
-        <section id="flashcards"> 
-            <div class="flashcard" tabindex="12"> 
-                <h3>Contenido Accesible</h3> 
-                <p>Descripción de audio y subtítulos en múltiples idiomas</p> 
-            </div> 
-            <div class="flashcard" tabindex="13"> 
-                <h3>Interfaz Adaptativa</h3> 
-                <p>Diseñada para funcionar con lectores de pantalla</p> 
-            </div> 
-            <div class="flashcard" tabindex="14"> 
-                <h3>Calidad Premium</h3> 
-                <p>Contenido en alta definición y sin interrupciones</p> 
-            </div> 
+
+        <h1><i class="bx bx-happy-heart-eyes"></i> Explora nuestro contenido</h1>
+        <!--1ERA SECCION EXPLORAR CONTENIDO-->
+        <section id="flashcards">
+            <div class="flashcard">
+                <h2>Contenido Accesible</h3>
+                    <p>Descripción de audio y subtítulos en múltiples idiomas</p>
+            </div>
+            <div class="flashcard">
+                <h2>Interfaz Adaptativa</h3>
+                    <p>Diseñada para funcionar con lectores de pantalla</p>
+            </div>
+            <div class="flashcard">
+                <h2>Calidad Premium</h3>
+                    <p>Contenido en alta definición y sin interrupciones</p>
+            </div>
         </section>
-        <!--2DA SECCION PELICULAS-->
-        <h2><i class='bx bx-camera-movie'></i> PELICULAS DESTACADAS</h2>
-        <section id="destacado">
-            
-            <div class="contenido" tabindex="6">Película 1</div>
-            <div class="contenido" tabindex="7">Película 2</div>
-            <div class="contenido" tabindex="8">Película 3</div>
-            <div class="contenido" tabindex="9">Película 4</div>
-            <div class="contenido" tabindex="10">Película 5</div>
-            <div class="contenido" tabindex="11">Película 6</div>
-            <div class="contenido" tabindex="12">Película 7</div>
-            <div class="contenido" tabindex="13">Película 8</div>
+        <!-- SECCIÓN PLANES DE SUSCRIPCIÓN-->
+        <div class="divisor"></div><!-- Divisor decorativo -->
+        <h1><i class='bx bxl-paypal'></i> Planes de Suscripción</h1>
+        <div class="divisor"></div><!-- Divisor decorativo -->
+        <!--1ERA SECCION FLASHCARD PAQUETES-->
+        <section id="flashcards">
+            <div class="flashcard2">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="30" height="25" viewBox="0 0 24 24"style="fill: rgba(255, 176, 0, 1);transform: ;msFilter:;">
+                        <path
+                            d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
+                        </path>
+                </svg>
+                <h3>Paquete Básico</h3>
+                <h1>20 soles al mes</h1>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>Con anuncios</p>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>1 dispositivo</p>
+                <button class="degradado2">Seleccionar paquete</button>
+            </div>
+            <div class="flashcard2">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="30" height="25" viewBox="0 0 24 24"style="fill: rgba(255, 176, 0, 1);transform: ;msFilter:;">
+                        <path
+                            d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
+                        </path>
+                </svg>
+                <h3>Paquete Básico</h3>
+                <h1>35 soles al mes</h1>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>Sin anuncios</p>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>1 dispositivo</p>
+                <button class="degradado2">Seleccionar paquete</button>
+            </div>
+            <div class="flashcard2">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="30" height="25" viewBox="0 0 24 24"style="fill: rgba(255, 176, 0, 1);transform: ;msFilter:;">
+                        <path
+                            d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
+                        </path>
+                </svg>
+                <h3>Paquete Básico</h3>
+                <h1>55 soles al mes</h1>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>Sin anuncios</p>
+                <p><i class='bx bxs-check-circle' style='color:#09aa00'></i>5 dispositivo</p>
+                <button class="degradado2">Seleccionar paquete</button>
+            </div>
         </section>
 
-        <!--3RA SECCION SERIES-->
-        <h2><i class='bx bx-movie-play'></i> SERIES DESTACADAS</h2>
-        <section id="destacado">
-            
-            <div class="contenido" tabindex="6">Serie 1</div>
-            <div class="contenido" tabindex="7">Serie 2</div>
-            <div class="contenido" tabindex="8">Serie 3</div>
-            <div class="contenido" tabindex="9">Serie 4</div>
-            <div class="contenido" tabindex="10">Serie 5</div>
-            <div class="contenido" tabindex="11">Serie 6</div>
-            <div class="contenido" tabindex="12">Serie 7</div>
-            <div class="contenido" tabindex="13">Serie 8</div>
+        <div class="divisor"></div><!-- Divisor decorativo -->
+
+        <h2><i class="bx bx-camera-movie"></i> PELICULAS DESTACADAS</h2>
+
+        <div class="divisor"></div><!-- Divisor decorativo -->
+        <!--2DA SECCIÓN FLASCARD CIRCULARES DE PELICULAS-->
+        <section id="flashcards-circulares">
+            <div class="flashcard-peliculas" onclick="abrirModal('Pelicula: Iroman', 'https://www.youtube.com/embed/sXfE_C2oOsw?si=z3OyYLJET5TrNsiw', 'RESUMEN: El primer heroe de marvel revela la verdad y evoluciona conforme descubre muchas verdades de su padre')">
+                <div class="portada1">
+                    <h1>Iroman</h1>
+                    <h2>Ver ahora</h2>
+                </div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 2', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 2')">
+                <div class="portada2">
+                    <h1>Titanic</h1>
+                    <h2>Ver ahora</h2>
+                </div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 3', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 3')">
+                <div class="portada3">
+                    <h1>Matrix</h1>
+                    <h2>Ver ahora</h2>
+                </div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 4', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 4')">
+                <div>Pelicula 4</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 5', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 5')">
+                <div>Pelicula 5</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 6', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 6')">
+                <div>Pelicula 6</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 7', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 7')">
+                <div>Pelicula 7</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 8', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 8')">
+                <div>Pelicula 8</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 9', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 9')">
+                <div>Pelicula 9</div>
+            </div>
+            <div class="flashcard-peliculas" onclick="abrirModal('Título 10', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 10')">
+                <div>Pelicula 10</div>
+            </div>
         </section>
-        <button class="degradado" tabindex="14">Botón 1</button>
-        <button class="degradado" tabindex="15">Botón 2</button>
+
+        <div class="divisor"></div><!-- Divisor decorativo -->
+
+        <h2><i class="bx bx-camera-movie"></i> SERIES DESTACADAS</h2>
+
+        <div class="divisor"></div><!-- Divisor decorativo -->
+        <!--3RA SECCIÓN FLASCARD CIRCULARES DE SERIES-->
+        <section id="flashcards-circulares2">
+            <div class="flashcard-series" onclick="abrirModal('Título 11', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 11')">
+                <div>Serie 1</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 12', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 12')">
+                <div>Serie 2</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 13', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 13')">
+                <div>Serie 3</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 14', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 14')">
+                <div>Serie 4</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 15', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 15')">
+                <div>Serie 5</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 16', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 16')">
+                <div>Serie 6</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 17', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 17')">
+                <div>Serie 7</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 18', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 18')">
+                <div>Serie 8</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 19', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 19')">
+                <div>Serie 9</div>
+            </div>
+            <div class="flashcard-series" onclick="abrirModal('Título 20', 'https://www.youtube.com/embed/dQw4w9WgXcQ', 'Descripción del video 20')">
+                <div>Serie 10</div>
+            </div>
+        </section>
+
+        <button class="degradado">PLANES DE SUSCRIPCIÓN</button>
     </main>
     <footer>
         <p>&copy; 2024 CineSonoro. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Modal Box -->
+    <div id="modal" class="modal">
+        <div class="modal-content"> 
+            <button class="close-btn" onclick="cerrarModal()">&times;</button>
+            <h2 id="modal-titulo">Título de la Película</h2> 
+            <iframe id="modal-video" width="560" height="315" src=""
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p id="modal-descripcion">Resumen de la Película</p>
+        </div>  
+    </div>
+
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -1,241 +1,567 @@
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-image: url('fondo-peliculas.png'); /* Añadir la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: blur(10px);
+  font-family: Arial, sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #141414;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("fondo-peliculas.png"); /* Añadir la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+  overflow-x: hidden;
 }
 
 header {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    padding: 1em;
-    display: flex; 
-    justify-content: space-between; /* Distribuir los elementos en el espacio */
-    align-items: center; /* Centrar verticalmente los elementos */
-    flex-wrap: wrap;
-}
-
-nav { 
-    display: flex; 
-    align-items: center; /* Centrar verticalmente los elementos del nav */ 
-    gap: 1em; /* Espacio entre los elementos del menú */ }
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex; /* Usar flexbox para alinear los elementos */ 
-    gap: 1em; /* Espacio entre los elementos del menú */
-}
-
-nav ul li {
-    display: inline;
-    position: relative;
-    padding-bottom: 5px; /* Añadir padding para separar el texto del borde */
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav button { 
-    margin-left: auto; /* Espacio entre el botón y los elementos anteriores */ 
-
-}
-
-nav ul li::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px; /* Altura del borde */
-    background: linear-gradient(to right, #4A00E0, #f06595); /* Degradado de colores */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-/* Estilo para el logotipo */
-#logo {
-    width: 100px; /* Ajusta el tamaño según sea necesario */
-    margin-right: 10px; /* Espacio entre el logo y el título */
-}
-
-/* Estilo para el TITULO */
-#titulo {
-    display: inline-block; /* Ajustar el borde al tamaño del contenido */
-    border: 2px solid #fff; /* Añadir un borde blanco */
-    padding: 10px; /* Añadir padding para separar el texto del borde */
-    border-radius: 10px; /* Bordes redondeados */
-    margin-right: auto; /* Alinear el título a la izquierda */
-}
-
-@media (max-width: 600px) { 
-    header { 
-        flex-direction: column; /* Cambiar la dirección a columna en pantallas pequeñas */ 
-        align-items: flex-start; /* Alinear los elementos al inicio en pantallas pequeñas */ 
-    } 
-        #logo { 
-            width: 40px; /* Ajustar el tamaño en pantallas pequeñas */ 
-            margin: 0 0 10px 0; /* Espacio debajo del logo en pantallas pequeñas */ 
-        } 
-
-        #titulo { 
-            padding: 5px; /* Ajustar el padding en pantallas pequeñas */ 
-            border: 1px solid #fff; /* Ajustar el borde en pantallas pequeñas */ 
-            margin-right: 0;
-        } 
-
-        nav ul { 
-            flex-direction: column; /* Disponer los elementos del menú en columna */ 
-            gap: 0.5em; /* Espacio entre los elementos del menú */ 
-        } 
-        
-        nav button { 
-            margin: 10px 0 0 0; /* Espacio encima del botón en pantallas pequeñas */ 
-        }
-}
-
-#destacado {
-    display: flex; /* Usar flexbox para alinear los div */
-    flex-wrap: wrap; /* Permitir que los div se envuelvan en múltiples líneas si es necesario */
-    justify-content: center; /* Centrar horizontalmente los div */
-    gap: 1em; /* Espacio entre los div */
-}
-
-#destacado .contenido {
-    flex: 1 1 calc(33.333% - 1em); /* Cada div ocupa un tercio del espacio disponible menos el gap */
-    box-sizing: border-box; /* Incluir el padding y borde en el tamaño total */
-}
-
-@media (max-width: 600px) {
-    #destacado .contenido {
-        flex: 1 1 100%; /* En pantallas más pequeñas, cada div ocupa el 100% del ancho */
-    }
-}
-
-/* SECCIONES FLASHCARD */
-
-.flashcard {
-    background: linear-gradient(135deg, #fc4a1a, #f7b733); /* Degradado de colores */
-    border-radius: 10px;
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-
-.flashcard:hover {
-    transform: translateY(-10px);
-}
-
-.flashcard h3{
-    color:#141414
-}
-
-#flashcards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px; /* Espacio entre las secciones */
-}
-
-@media (max-width: 600px) {
-    .flashcard {
-        flex: 1 1 100%; /* Cada flashcard ocupa el 100% del ancho en pantallas pequeñas */
-    }
-
-    #flashcards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/*-----------------------------------------------------*/
-/* Botones con colores degradados */ 
-.degradado { 
-    background: linear-gradient(45deg, #8E2DE2, #4A00E0); 
-    border: none; 
-    border-radius: 10px; 
-    color: white; 
-    padding: 10px 20px; 
-    margin: 10px; 
-    cursor: pointer; 
-    font-size: 16px; 
-}
-    
-.degradado:hover { 
-    background: linear-gradient(45deg, #0575E6, #021B79); 
-}
-
-.degradado2 {
-    background: linear-gradient(45deg, #c31432, #240b36); 
-    border: none; 
-    border-radius: 10px; 
-    color: white; 
-    padding: 10px 20px; 
-    margin: 10px; 
-    cursor: pointer; 
-    font-size: 16px; 
-}
-
-.degradado2:hover { 
-    background: linear-gradient(45deg, #FF416C, #FF4B2B); 
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 1em;
+  display: flex;
+  justify-content: space-between; /* Distribuir los elementos en el espacio */
+  align-items: center; /* Centrar verticalmente los elementos */
+  position: sticky; /* Hacer que el encabezado sea pegajoso */
+  top: 0; /* Posición desde la parte superior */
+  z-index: 1000; /* Asegurar que se superponga sobre otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir una sombra para destacar el encabezado */
 }
 
 main {
     margin-top: 2em;
     width: 90%;
-}
+  }
+  
+  main h2{
+    color: #ffffff;
+  }
 
-main h1{
-    #background: linear-gradient(to right, #4A00E0, #f06595);
+  main h1{
     color: #141414;
+    
+  }
+
+/* Estilo para el logotipo */
+#logo {
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  margin-right: 20px; /* Espacio entre el logo y el título */
+  margin-left: 20px;  
 }
 
+/* Estilo para el TITULO */
+#titulo {
+  display: inline-block; /* Ajustar el borde al tamaño del contenido */
+  border: 2px solid #fff; /* Añadir un borde blanco */
+  padding: 10px; /* Añadir padding para separar el texto del borde */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-right: auto; /* Alinear el título a la izquierda */
+}
+
+nav {
+  display: flex;
+  align-items: center; /* Centrar verticalmente los elementos del nav */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    
+  }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Usar flexbox para alinear los elementos */
+  gap: 2em; /* Espacio entre los elementos del menú */
+}
+
+nav ul li {
+  display: inline;
+  position: relative;
+  padding-bottom: 5px; /* Añadir padding para separar el texto del borde */
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px; /* Altura del borde */
+  background: linear-gradient(to right,#4a00e0,#f06595); /* Degradado de colores */
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Estilos para el icono de hamburguesa y el menú móvil */
+.hamburger {
+  display: none; /* Ocultar el icono en pantallas grandes */
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/* Mostrar el menú en pantallas grandes */
+@media (min-width: 601px) {
+  nav ul,
+  nav button {
+    display: flex !important; /* Asegurar que se muestren en pantallas grandes */
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+  }
+  nav ul,
+  nav button {
+    display: none; /* Ocultar el menú y el botón en pantallas pequeñas por defecto */
+  }
+  nav ul.show,
+  nav button.show {
+    display: flex; /* Mostrar el menú y el botón cuando se haga clic en el icono de hamburguesa */
+    flex-direction: column;
+    gap: 1em; /* Espacio entre los elementos del menú */
+  }
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2em;
+    border-radius: 20px;
+  }
+  nav button {
+    margin: 10px 0 0 0; /* Espacio encima del botón en pantallas pequeñas */
+    align-self: flex-end; /* Alinear el botón al final del nav */
+  }
+  
+}
+
+#destacado {
+  display: flex; /* Usar flexbox para alinear los div */
+  flex-wrap: wrap; /* Permitir que los div se envuelvan en múltiples líneas si es necesario */
+  justify-content: center; /* Centrar horizontalmente los div */
+  gap: 1em; /* Espacio entre los div */
+}
+
+#destacado .contenido {
+  flex: 1 1 calc(33.333% - 1em); /* Cada div ocupa un tercio del espacio disponible menos el gap */
+  box-sizing: border-box; /* Incluir el padding y borde en el tamaño total */
+}
+
+@media (max-width: 600px) {
+  #destacado .contenido {
+    flex: 1 1 100%; /* En pantallas más pequeñas, cada div ocupa el 100% del ancho */
+  }
+}
+
+/* SECCIONES FLASHCARD */
+
+.flashcard {
+  background: url('fondo7.jpeg'); /* Imagen decorativa de fondo */
+  background-size:cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 2px solid #fff ;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  
+}
+.flashcard p{
+  color:#ffffff;
+  
+}
+
+.flashcard2 {
+  background: linear-gradient(
+    135deg,
+    #e205e6,
+    #021b79
+  ); /* Degradado de colores */
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.flashcard2 i {
+  width: 20px;
+  height: 20px;
+}
+
+.flashcard2 h1 {
+  color: #141414;
+}
+
+.flashcard:hover {
+  transform: translateY(-10px);
+}
+
+.flashcard h2 {
+  color: #20201e;
+  width: 100%;
+}
+
+#flashcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Espacio entre las secciones */
+}
+
+@media (max-width: 600px) {
+  .flashcard {
+    flex: 1 1 100%; /* Cada flashcard ocupa el 100% del ancho en pantallas pequeñas */
+  }
+
+  #flashcards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* Boton de colores degradados */
+.degradado {
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.degradado:hover {
+  background: linear-gradient(45deg, #0575e6, #021b79);
+}
+
+.degradado2 {
+  background: linear-gradient(45deg, #0c88ee, #161ef9);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.degradado2:hover {
+  background: linear-gradient(45deg,  #ed5930,#fddf1e);
+}
+
+
+
+/* BOTONES DE PELICULAS Y SERIES */
 .contenido {
-    margin: 1em 0;
-    padding: 1em;
-    background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
-    border-radius: 10px;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: rgba(51, 51, 51, 0.8); /* Fondo semi-transparente */
+  border-radius: 10px;
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 600px) {
-    nav ul li {
-        display: inline-block;
-        margin: 0.5em 0;
+  nav ul li {
+    display: inline-block;
+    margin: 0.5em 0;
+  }
+
+  .contenido {
+    margin: 0.5em 0;
+  }
+}
+
+/* SECCIONES PARA FLASHCARD CIRCULARES PELICULAS Y SERIES*/
+
+#flashcards-circulares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre las flashcards */
+    margin: 2em 0; /* Margen superior e inferior */
+    
+}
+#flashcards-circulares2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Espacio entre las flashcards */
+  margin: 2em 0; /* Margen superior e inferior */
+}
+
+.flashcard-peliculas {
+    background: linear-gradient(135deg, #780206, #061161); /* Degradado de colores */
+    width: 200px; /* Ajusta el tamaño de las flashcards */
+    height: 200px; /* Ajusta el tamaño de las flashcards */
+    border-radius: 50%; /* Hacer las flashcards circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(242, 255, 5);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.flashcard-peliculas h1,h2{
+  color: yellow;
+}
+
+
+.flashcard-series {
+  background: linear-gradient(135deg, #134E5E, #71B280); /* Degradado de colores */
+    width: 200px; /* Ajusta el tamaño de las flashcards */
+    height: 200px; /* Ajusta el tamaño de las flashcards */
+    border-radius: 50%; /* Hacer las flashcards circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.flashcard-peliculas:hover {
+    transform: translateY(-10px);
+}
+
+.flashcard-series:hover {
+  transform: translateY(-10px);
+}
+
+/* .flashcard-peliculas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('peli1.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: 0;
+} */
+
+/*PORTADAS DE PELICULAS*/
+.portada1{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('peli1.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+
+.portada2{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('peli4.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+
+.portada3{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('peli3.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+
+
+.flashcard-series::before {
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('peli4.jpeg'); /* Imagen decorativa de fondo */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Controla la opacidad de la imagen de fondo */
+    z-index: 0;
+}
+
+
+.flashcard-peliculas > div {
+    position: relative;
+    z-index: 1;
+}
+
+.flashcard-series > div {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .flashcard-peliculas {
+        width: 120px;
+        height: 120px;
     }
 
-    .contenido {
-        margin: 0.5em 0;
+    .flashcard-series {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #flashcards-circulares {
+        justify-content: center; /* Centrar las flashcards en pantallas pequeñas */
+    }
+    #flashcards-circulares2 {
+       justify-content: center; /* Centrar las flashcards en pantallas pequeñas */
+    }
+
+    .flashcard-peliculas {
+        width: 100px;
+        height: 100px;
+    }
+
+    .flashcard-series {
+        width: 100px;
+        height: 100px;
     }
 }
+
+/* ESTILOS PARA EL MODAL */
+
+/* Estilo del modal */
+.modal {
+  display: none; /* Ocultar el modal por defecto */
+  position: fixed; /* Posicionarlo sobre la página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  justify-content: center;
+  align-items: center;
+  z-index: 1001; /* Asegurar que se superponga sobre otros elementos */
+}
+
+.modal h2{
+  color: #141414;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ff6b6b, #f06595); /* Degradado de colores */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  max-height: 90vh; /* Limitar la altura máxima del contenido del modal */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red; /* Color rojo */
+  border: none;
+  font-size: 2rem; /* Tamaño de letra más grande */
+  color: white; /* Color del icono de cerrar */
+  cursor: pointer;
+  border-radius: 50%; /* Bordes redondeados */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Altura del botón */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+  .modal-content {
+      width: 90%;
+      padding: 10px;
+  }
+
+  .close-btn {
+      top: 5px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+  }
+}
+
+
+
+
+
+/* DIVISORES DE SECTION */
+.divisor {
+  width: 100%;
+  height: 10px; /* Ajusta la altura del divisor según sea necesario */
+  background-color: #FFD700; /* Color amarillo */
+  margin: 20px 0; /* Espacio superior e inferior para separar las secciones */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir una sombra ligera */
+}
+
 
 /* Estilos del footer */
 footer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    padding: 1em;
-    margin-top: auto;
-    text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  padding: 1em;
+  margin-top: auto;
+  text-align: center;
 }
 
 footer p {
-    margin: 0;
-    color: #bbb;
+  margin: 0;
+  color: #bbb;
 }
-
-

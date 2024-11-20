@@ -6,14 +6,14 @@ if ('speechSynthesis' in window) {
     function leerTexto(event) {
         // Verificar si el evento se disparó sobre un elemento h1, label o li
         const tagName = event.target.tagName.toLowerCase();
-        if (tagName === 'h1' || tagName === 'h2' || tagName === 'label' || tagName === 'li' || tagName === 'a' || tagName === 'button' || tagName === 'div') {
+        if (tagName === 'h1' || tagName === 'h2' || tagName === 'label' || tagName === 'li' || tagName === 'a' || tagName === 'button' || tagName === 'div' || tagName === 'p') {
             // Detener cualquier síntesis de voz en progreso
             window.speechSynthesis.cancel();
 
             // Crear nuevo mensaje de voz con el texto del elemento
             mensaje = new SpeechSynthesisUtterance(event.target.innerText);
             mensaje.lang = "es-ES"; // Configuración del idioma
-            mensaje.voice = speechSynthesis.getVoices().find(voice => 
+            mensaje.voice = speechSynthesis.getVoices().find(voice =>
                 voice.name.includes("Google español (España) masculino") || voice.name.includes("Microsoft Pablo")
             );
 
@@ -26,7 +26,7 @@ if ('speechSynthesis' in window) {
     function bienvenida() {
         const bienvenidaMensaje = new SpeechSynthesisUtterance("Bienvenidos a CineSonoro, Tu plataforma de streaming inclusiva");
         bienvenidaMensaje.lang = "es-ES"; // Configuración del idioma
-        bienvenidaMensaje.voice = speechSynthesis.getVoices().find(voice => 
+        bienvenidaMensaje.voice = speechSynthesis.getVoices().find(voice =>
             voice.name.includes("Google español (España) masculino") || voice.name.includes("Microsoft Pablo")
         );
         window.speechSynthesis.speak(bienvenidaMensaje);
@@ -46,7 +46,7 @@ if ('speechSynthesis' in window) {
             // Crear mensaje de voz para el texto especificado
             const mensajeAtajo = new SpeechSynthesisUtterance(texto);
             mensajeAtajo.lang = "es-ES"; // Configuración del idioma
-            mensajeAtajo.voice = speechSynthesis.getVoices().find(voice => 
+            mensajeAtajo.voice = speechSynthesis.getVoices().find(voice =>
                 voice.name.includes("Google español (España) masculino") || voice.name.includes("Microsoft Pablo")
             );
             // Reproducir el mensaje de voz
@@ -54,17 +54,17 @@ if ('speechSynthesis' in window) {
         }
     }
 
-    // Agregar atajos de teclado
-    document.addEventListener('keydown', function(event) {
+// Agregar atajos de teclado
+    document.addEventListener('keydown', function (event) {
         const keyName = event.key;
         if (keyName === '1') {
             manejarAtajo('nav ul li a[tabindex="1"]', 'Inicio');
         } else if (keyName === '2') {
-            manejarAtajo('nav ul li a[tabindex="2"]', 'Películas');
+            manejarAtajo('nav ul li a[tabindex="2"]', 'Suscripcion');
         } else if (keyName === '3') {
-            manejarAtajo('nav ul li a[tabindex="3"]', 'Series');
+            manejarAtajo('nav ul li a[tabindex="3"]', 'Peliculas');
         } else if (keyName === '4') {
-            manejarAtajo('nav ul li a[tabindex="4"]', 'Mi Lista');
+            manejarAtajo('nav ul li a[tabindex="4"]', 'Series');
         } else if (keyName === '5') {
             manejarAtajo('#destacado h2', 'Destacado');
         } else if (keyName === '6') {
@@ -81,6 +81,36 @@ if ('speechSynthesis' in window) {
             bienvenida();
         }
     });
+
 } else {
-    console.log("API de síntesis de voz no soportada en este navegador.");
+        console.log("API de síntesis de voz no soportada en este navegador.");
+    }
+
+
+// FUNCION JAVASCRIT PARA MENU HAMBURGUESA
+function toggleMenu() { 
+    const navLinks = document.querySelector('nav ul'); 
+    const loginButton = document.getElementById('loginButton'); 
+    navLinks.classList.toggle('show'); 
+    loginButton.classList.toggle('show'); 
 }
+
+function abrirModal(titulo, videoUrl, descripcion) { 
+    document.getElementById('modal-titulo').textContent = titulo; 
+    document.getElementById('modal-video').src = videoUrl; 
+    document.getElementById('modal-descripcion').textContent = descripcion; 
+    document.getElementById('modal').style.display = 'flex'; 
+} 
+    
+function cerrarModal() { 
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('modal-video').src = ''; // Detener el video 
+}
+
+// Agregar el evento para cerrar el modal con la tecla de escape 
+document.addEventListener('keydown', function(event) { 
+    if (event.key === 'Escape') { 
+        cerrarModal(); 
+    } 
+});
+
