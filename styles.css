@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   padding: 1em;
   display: flex;
@@ -24,7 +24,7 @@ header {
   align-items: center; /* Centrar verticalmente los elementos */
   position: sticky; /* Hacer que el encabezado sea pegajoso */
   top: 0; /* Posición desde la parte superior */
-  z-index: 1000; /* Asegurar que se superponga sobre otros elementos */
+  z-index: 1001; /* Asegurar que se superponga sobre otros elementos */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir una sombra para destacar el encabezado */
 }
 
@@ -131,6 +131,7 @@ nav ul li::after {
     display: flex; /* Mostrar el menú y el botón cuando se haga clic en el icono de hamburguesa */
     flex-direction: column;
     gap: 1em; /* Espacio entre los elementos del menú */
+    
   }
   nav ul {
     position: absolute;
@@ -143,6 +144,7 @@ nav ul li::after {
   nav button {
     margin: 10px 0 0 0; /* Espacio encima del botón en pantallas pequeñas */
     align-self: flex-end; /* Alinear el botón al final del nav */
+  
   }
   
 }
@@ -251,6 +253,7 @@ nav ul li::after {
   cursor: pointer;
   font-size: 16px;
   text-decoration: none;
+  align-items: center;
 }
 
 .degradado:hover {
@@ -335,6 +338,28 @@ nav ul li::after {
   color: yellow;
 }
 
+/* FLASHCARD DE SERIES*/
+.flashcard-series {
+  background: linear-gradient(135deg, #780206, #061161); /* Degradado de colores */
+  width: 200px; /* Ajusta el tamaño de las flashcards */
+  height: 200px; /* Ajusta el tamaño de las flashcards */
+  border-radius: 50%; /* Hacer las flashcards circulares */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(242, 255, 5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.flashcard-series h1,h2{
+color: yellow;
+}
+
 
 .flashcard-series {
   background: linear-gradient(135deg, #134E5E, #71B280); /* Degradado de colores */
@@ -412,6 +437,47 @@ nav ul li::after {
   width: 100%;
   height: 100%;
   background: url('matrix.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+
+/*PORTADAS DE SERIES*/
+.serie1{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('muertos.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+.serie2{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('calamar.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Controla la opacidad de la imagen de fondo */
+  z-index: 0;
+}
+.serie3{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('merlina.jpeg');
   background-size: cover;
   background-position: center;
   opacity: 0.6; /* Controla la opacidad de la imagen de fondo */

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 body{
@@ -13,6 +14,7 @@ body{
     background: url('login1.jpg')no-repeat;
     background-size: cover;
     background-position: center;
+    
 }
 
 .wrapper{
@@ -88,15 +90,16 @@ body{
 .wrapper .btn {
     width: 100%;
     height: 45px;
-    background: #fff;
+    background: #f2a8e970;
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 25px;
     color: #333;
-    font-weight: 600;
+    font-weight: 200;
+    
 
 }
 

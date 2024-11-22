@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.35s linear;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+.card {
+    --color: #ff88a6;
+    --border-size: 1rem;
+    --bg-color: #252525;
+    position: relative;
+    background-color: var(--bg-color);
+    width: 280px;
+    margin: 2rem;
+    border-radius: var(--border-size);
+    color: white;
+    display: grid;
+    place-content: center;
+    padding: 3rem 2rem;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+}
+
+.card::before {
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(var(--color) 0deg,
+            transparent 60deg,
+            transparent 180deg,
+            var(--color) 180deg,
+            transparent 240deg);
+    inset: -50%;
+    z-index: -2;
+    animation: border 8s linear infinite;
+}
+
+.card:hover::before {
+    animation-play-state: paused;
+}
+
+@keyframes border {
+    to {
+        transform: rotateZ(-360deg);
+    }
+}
+
+.card::after {
+    --inset: 0.25rem;
+    background-color: #111;
+    inset: var(--inset);
+    border-radius: calc(var(--border-size) - var(--inset));
+    z-index: -1;
+    transition: all 0.35s linear;
+}
+
+.card:hover::after {
+    background-color: var(--bg-color);
+}
+
+.card i {
+    font-size: 4rem;
+    margin-inline: auto;
+    color: transparent;
+    -webkit-text-stroke: thin var(--color);
+}
+
+.card:hover i {
+    color: var(--color);
+    -webkit-text-stroke-width: 0;
+}
+
+.card .title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-block: 2.5rem 1.5rem;
+    color: var(--color);
+}
+
+.card .detail {
+    line-height: 1.5rem;
+    text-align: center;
+    opacity: 0.75;
+}
+
+.degradado2 {
+    background: linear-gradient(45deg, #ed5930, #fddf1e);
+    border: none;
+    border-radius: 20px;
+    color: #111;
+    padding: 10px 20px;
+    margin-left: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.degradado2:hover {
+    background: linear-gradient(45deg, #0c88ee, #161ef9);
+}
