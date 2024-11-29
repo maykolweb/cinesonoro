@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinesonoro</title>
     <link rel="stylesheet" href="styles3.css">
 </head>
+
 <body>
     <header class="header">
 
@@ -22,22 +24,53 @@
                     <li><a href="peliculas.html">Películas</a></li>
                     <li><a href="series.html">Series</a></li>
                     <li><a href="suscribete.html">Suscripción</a></li>
-                    
+
                 </ul>
             </nav>
-            <a href="#" class="btn-1">Contacto</a>
+            <a href="contacto.html" class="btn-1">Contacto</a>
         </div>
 
         <div class="header-content container">
 
             <div class="header-1">
                 <img src="images-pelis/venom.png" alt="venon">
-                <a href="#" class="btn-2">Ver ahora</a>
+                <a href="#" class="btn-2"><button id="myBtn">VER AHORA</button></a>
+
+                <!--Inicio del The Modal -->
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>PELÍCULA: VENOM</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Resumen: Eddie y Venom están a la fuga. Perseguidos por sus sendos mundos y cada vez más
+                                cercados, el dúo se ve abocado a tomar una decisión devastadora".</p>
+
+                            <iframe width="550" height="350"
+                                src="https://www.youtube.com/embed/jsLTvwODi60?si=f8jvKDkEBIyMYtK5"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>POPULAR AHORA</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Final del The Modal -->
+
             </div>
 
             <div class="header-2">
                 <h1>Las mejores <br> películas</h1>
-                <img src="images-pelis/play.png" alt="play">
+
             </div>
 
         </div>
@@ -57,8 +90,10 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/1.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>IROMAN 3</h3>
+                    <p>El descarado y brillante Tony Stark, tras ver destruido todo su universo personal, debe encontrar
+                        y enfrentarse a un enemigo cuyo poder no conoce límites. Este viaje pondrá a prueba su entereza
+                        una y otra vez, y le obligará a confiar en su ingenio.
 
                     </p>
                 </div>
@@ -68,8 +103,10 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/2.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Thor: amor y trueno</h3>
+                    <p>Thor está buscando la paz interior, pero la irrupción de Gorr, el asesino de dioses, le obliga a
+                        volver al combate. Thor recluta a la Reina Valkiria, Korg y su exnovia, Jane Foster, para que lo
+                        ayuden a evitar la extinción de los dioses.
 
                     </p>
                 </div>
@@ -79,8 +116,10 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/3.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Thor: Ragnarok</h3>
+                    <p>Thor está preso en el otro extremo del universo. Necesita regresar a tiempo para evitar que la
+                        todopoderosa Hela destruya su mundo, pero para escapar de su confinamiento y evitar el
+                        apocalipsis tendrá que vencer antes al increíble Hulk en un torneo de gladiadores.
 
                     </p>
                 </div>
@@ -90,8 +129,9 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/4.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Resident Evil</h3>
+                    <p>Los supervivientes intentan descubrir la verdad que oculta Umbrella Corporation. Mientras, luchan
+                        contra zombis sedientos de sangre en los páramos de Raccoon City.
 
                     </p>
                 </div>
@@ -101,8 +141,9 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/5.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>La vieja guardia</h3>
+                    <p>Un grupo de mercenarios, todos inmortales y con la capacidad de curarse a sí mismos, descubren
+                        que alguien sabe su secreto y deben luchar para proteger su libertad.
 
                     </p>
                 </div>
@@ -112,8 +153,9 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/6.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Spectral</h3>
+                    <p>Una fuerza sobrenatural ataca a la ciudad de Nueva York, devastada por la guerra. Un equipo de
+                        fuerzas especiales se prepara para detener a la terrible amenaza.
 
                     </p>
                 </div>
@@ -123,8 +165,9 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/7.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>300: El Origen</h3>
+                    <p>El Origen de un Imperio" enfrenta a Temístocles contra las invasoras fuerzas persas capitaneadas
+                        por Xerxes (mortal devenido en dios), y Artemisia, la vengativa comandante de la armada persa.
 
                     </p>
                 </div>
@@ -134,8 +177,9 @@
             <div class="box-1">
                 <div class="content">
                     <img src="images-pelis/8.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Project Power</h3>
+                    <p>Las vidas de un exsoldado, una adolescente y un policía se cruzan en Nueva Orleans mientras
+                        buscan al suministrador de una pastilla que otorga superpoderes temporales.
 
                     </p>
                 </div>
@@ -161,8 +205,9 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/9.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Deadpool</h3>
+                    <p>Un exmercenario quien, tras haber sido sometido a un cruel experimento, adquiere el superpoder de
+                        sanar rápidamente y pretende vengarse del hombre que destrozó su vida.
 
                     </p>
                 </div>
@@ -172,8 +217,10 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/10.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Venom</h3>
+                    <p>El periodista Eddie Brock está investigando a Carlton Drake, el célebre fundador de Life
+                        Foundation. Brock establece una simbiosis con un ente alienígena que le ofrece superpoderes,
+                        pero el ser se apodera de su personalidad y lo vuelve perverso.
 
                     </p>
                 </div>
@@ -183,8 +230,10 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/11.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Spider-Man: sin camino a casa</h3>
+                    <p>Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se
+                        vuelve una locura. Peter le pide ayuda al Doctor Strange para recuperar su vida, pero algo sale
+                        mal y provoca una fractura en el multiverso.
 
                     </p>
                 </div>
@@ -194,8 +243,10 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/12.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Avengers: Infinity War</h3>
+                    <p>Los superhéroes se alían para vencer al poderoso Thanos, el peor enemigo al que se han
+                        enfrentado. Si Thanos logra reunir las seis gemas del infinito: poder, tiempo, alma, realidad,
+                        mente y espacio, nadie podrá detenerlo.
 
                     </p>
                 </div>
@@ -205,8 +256,10 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/13.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Avengers: Endgame</h3>
+                    <p>Los Vengadores comprenden por fin lo frágil que es la realidad y los sacrificios que hay que
+                        hacer para mantenerla, en una historia de amistad, trabajo en equipo y sobre dejar a un lado las
+                        diferencias para superar un obstáculo imposible.
 
                     </p>
                 </div>
@@ -216,8 +269,9 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/14.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Mad Max: furia en el camino</h3>
+                    <p>Aunque está decidido a vagar solo por el páramo post-apocalíptico, Mad Max se une a Furiosa, una
+                        comandante fugitiva, y su banda, quienes están tratando de escapar de un señor de la guerra.
 
                     </p>
                 </div>
@@ -227,8 +281,9 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/15.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Duro de Matar 4.0</h3>
+                    <p>El detective McClane debe detener a un grupo terrorista que pretende colapsar la infraestructura
+                        computacional de Estados Unidos.
 
                     </p>
                 </div>
@@ -238,8 +293,10 @@
             <div class="box-2">
                 <div class="content">
                     <img src="images-pelis/16.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Red One</h3>
+                    <p>ras el secuestro de Papá Noel, nombre en clave: RED ONE, el Jefe de Seguridad del Polo Norte
+                        (Dwayne Johnson) debe formar equipo con el cazarrecompensas más infame del mundo (Chris Evans)
+                        en una misión trotamundos llena de acción para salvar la Navidad.
 
                     </p>
                 </div>
@@ -266,8 +323,9 @@
             <div class="box3">
                 <div class="content">
                     <img src="images-pelis/17.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Joker 2</h3>
+                    <p>El comediante fracasado Arthur Fleck conoce al amor de su vida, Harley Quinn, mientras está en el
+                        Hospital Estatal de Arkham. Al ser liberados, la pareja se embarca en una aventura romántica.
 
                     </p>
                 </div>
@@ -277,8 +335,9 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/18.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Morbius</h3>
+                    <p>Al intentar encontrar una cura para una extraña enfermedad en su sangre, un doctor se transforma
+                        en un vampiro.
 
                     </p>
                 </div>
@@ -288,8 +347,10 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/19.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Alien: Romulus</h3>
+                    <p>Un grupo de colonos espaciales se enfrenta a la criatura más aterradora del universo en una nave
+                        espacial abandonada a la que han accedido para recuperar cámaras de criostasis, con las que
+                        piensan huir a un planeta lejano.
 
                     </p>
                 </div>
@@ -299,8 +360,9 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/20.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>The Batman</h3>
+                    <p>Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia
+                        familia. Además, entra en conflicto con un asesino en serie conocido como "el Acertijo".
 
                     </p>
                 </div>
@@ -310,8 +372,9 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/21.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>El hoyo 2</h3>
+                    <p>Después de que un misterioso líder impuso su ley en un brutal sistema de celdas verticales, una
+                        recién llegada desafía el dudoso método de distribución de alimentos en la prisión.
 
                     </p>
                 </div>
@@ -321,8 +384,9 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/22.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>El hoyo 2</h3>
+                    <p>Después de que un misterioso líder impuso su ley en un brutal sistema de celdas verticales, una
+                        recién llegada desafía el dudoso método de distribución de alimentos en la prisión.
 
                     </p>
                 </div>
@@ -332,8 +396,10 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/23.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Black Widow</h3>
+                    <p>Una peligrosa conspiración, relacionada con su pasado, persigue a Natasha Romanoff, también
+                        conocida como Viuda Negra. La agente tendrá que lidiar con las consecuencias de haber sido
+                        espía, así como con las relaciones rotas, para sobrevivir.
 
                     </p>
                 </div>
@@ -343,8 +409,22 @@
             <div class="box-3">
                 <div class="content">
                     <img src="images-pelis/24.jpg" alt="">
-                    <h3>Película hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <h3>Black Adam</h3>
+                    <p>Unos arqueólogos liberan de su tumba a Black Adam, quien llevaba 5000 años preso tras haber
+                        recibido los poderes de los dioses. De nuevo entre los humanos, Black Adam se dispone a imponer
+                        su justicia, muy diferente a la del mundo en el que despertó.
+
+                    </p>
+                </div>
+            </div>
+
+            <!--Más peliculas-->
+            <div class="box-3">
+                <div class="content">
+                    <img src="images-pelis/25.jpg" alt="">
+                    <h3>Deadpool & Wolverine</h3>
+                    <p>Deadpool viaja en el tiempo con la intención de reclutar a Wolverine en la batalla contra un
+                        enemigo común: Paradox.
 
                     </p>
                 </div>
@@ -363,15 +443,16 @@
         <h3>Cinesonoro</h3>
 
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Películas</a></li>
-            <li><a href="#"><s>Series</s></a></li>
-            <li><a href="#">Suscripción</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="suscribete.html">Suscripción</a></li>
         </ul>
 
     </footer>
 
-
     <script src="scripts.js"></script>
+    <script src="peliculas.js"></script>
 </body>
+
 </html>

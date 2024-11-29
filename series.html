@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinesonoro</title>
     <link rel="stylesheet" href="styles5.css">
 </head>
+
 <body>
     <header class="header">
 
@@ -22,22 +24,52 @@
                     <li><a href="peliculas.html">Películas</a></li>
                     <li><a href="series.html">Series</a></li>
                     <li><a href="suscribete.html">Suscripción</a></li>
-                    
+
                 </ul>
             </nav>
-            <a href="#" class="btn-1">Contacto</a>
+            <a href="contacto.html" class="btn-1">Contacto</a>
         </div>
 
         <div class="header-content container">
 
             <div class="header-1">
                 <img src="images-pelis/loki.png" alt="loki">
-                <a href="#" class="btn-2">Ver ahora</a>
+                <a href="#" class="btn-2"><button id="myBtn">VER AHORA</button></a>
+
+                <!--Inicio del The Modal -->
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>SERIE: LOKI</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Resumen: Loki se aleja de la sombra de su hermano para embarcarse en una aventura que se desarrolla tras los acontecimientos de "Avengers: Endgame".</p>
+                            
+                            <iframe width="550" height="350"
+                                src="https://www.youtube.com/embed/vy61fsFSPqo?si=xgHqMGbdtRp4g8nh"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <h3>POPULAR AHORA</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Final del The Modal -->
+
             </div>
 
             <div class="header-2">
                 <h1>Las mejores <br> series</h1>
-                <img src="images-pelis/play.png" alt="play">
+
             </div>
 
         </div>
@@ -56,9 +88,11 @@
             <!--Primera pelicula-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/1.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie1.jpg" alt="">
+                    <h3>Breaking Bad</h3>
+                    <p>El profesor calmado de química de una secundaria, Walter White cree que su vida no puede ser
+                        peor. Su salario apenas le alcanza para sostener a su familia, una situación que no mejora
+                        cuando su esposa da a luz y su hijo adolescente sufre de parálisis cerebral.
 
                     </p>
                 </div>
@@ -67,9 +101,11 @@
             <!--Segunda pelicula-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/2.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie2.jpg" alt="">
+                    <h3>The Office</h3>
+                    <p>La adaptación de Estados Unidos, localizada en Scranton, Pensilvania., es la de una compañía
+                        papelera de alguna forma un poco más dinámica que la versión original Británica, aunque los
+                        personajes son esencialmente los mismos, desde Michael Scott, el peor jefe de todos.
 
                     </p>
                 </div>
@@ -78,9 +114,11 @@
             <!--Más peliculas-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/3.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie3.jpg" alt="">
+                    <h3>The Big Bang Theory</h3>
+                    <p>Leonard y Sheldon son dos cerebros privilegiados que pueden ser capaces de decirle a todo el
+                        mundo más de lo que quiere saber sobre la física cuántica, pero que no tienen ni la menor idea
+                        de cómo relacionarse socialmente, sobre todo cuando se trata de mujeres.
 
                     </p>
                 </div>
@@ -89,9 +127,11 @@
             <!--Más peliculas-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/4.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie4.jpg" alt="">
+                    <h3>Dr. House</h3>
+                    <p>El Dr. Gregory House, un singular genio de la medicina, se encarga de resolver casos como lo
+                        haría Sherlock Holmes. De forma astuta juega con la psicología de la Dra. Lisa Cuddy, su mejor
+                        amigo, el oncólogo James Wilson, y del resto de su equipo de trabajo.
 
                     </p>
                 </div>
@@ -100,9 +140,10 @@
             <!--Más peliculas-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/5.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie5.jpg" alt="">
+                    <h3>The Good Doctor</h3>
+                    <p>Un cirujano joven y autista que padece el síndrome del sabio empieza a trabajar en un hospital
+                        prestigioso. Allá tendrá que vencer el escepticismo con el que sus colegas lo reciben.
 
                     </p>
                 </div>
@@ -111,37 +152,15 @@
             <!--Más peliculas-->
             <div class="box-1">
                 <div class="content">
-                    <img src="images-pelis/6.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie6.jpg" alt="">
+                    <h3>El mentalista</h3>
+                    <p>Patrick Jane, consejero de la Agencia de Investigación de California, es conocido por sus métodos
+                        inusuales, sin contar su ex carrera como psíquico, pero el hombre tiene un récord asombroso de
+                        casos resueltos en crímenes serios utilizando poderes de observación extraordinarios.
 
                     </p>
                 </div>
             </div>
-
-            <!--Más peliculas-->
-            <div class="box-1">
-                <div class="content">
-                    <img src="images-pelis/7.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-            <!--Más peliculas-->
-            <div class="box-1">
-                <div class="content">
-                    <img src="images-pelis/8.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-
 
         </div>
 
@@ -160,9 +179,11 @@
             <!--Primera pelicula-->
             <div class="box-2">
                 <div class="content">
-                    <img src="images-pelis/9.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie7.jpg" alt="">
+                    <h3>The Last of Us</h3>
+                    <p>Joel y Ellie, dos personas conectadas por la brutalidad del mundo en el que viven, se ven
+                        obligados a enfrentarse a criaturas y asesinos despiadados, mientras viajan a través de un
+                        Estados Unidos posapocalíptico.
 
                     </p>
                 </div>
@@ -171,9 +192,10 @@
             <!--Segunda pelicula-->
             <div class="box-2">
                 <div class="content">
-                    <img src="images-pelis/10.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie8.jpg" alt="">
+                    <h3>Superman y Lois</h3>
+                    <p>El Hombre de Acero, el superhéroe más famoso del mundo, y la periodista Lois Lane se enfrentan a
+                        uno de sus mayores desafíos: ser padres trabajadores en la sociedad actual.
 
                     </p>
                 </div>
@@ -182,9 +204,11 @@
             <!--Más peliculas-->
             <div class="box-2">
                 <div class="content">
-                    <img src="images-pelis/11.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie9.jpg" alt="">
+                    <h3>Juego de tronos</h3>
+                    <p>El libro mejor vendido de la serie "A Song of Ice and Fire" escrito por George R.R, es llevado a
+                        la pantalla chica cuando HBO decide recrear esta historia épica de fantasía. Es la descripción
+                        de dos familias poderosas, reyes y reinas, caballeros y renegados, hombres falsos y honestos.
 
                     </p>
                 </div>
@@ -193,9 +217,10 @@
             <!--Más peliculas-->
             <div class="box-2">
                 <div class="content">
-                    <img src="images-pelis/12.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie10.jpg" alt="">
+                    <h3>The Boys</h3>
+                    <p>Cuando los superhéroes abusan de sus superpoderes en lugar de usarlos para el bien, unos
+                        "muchachos" se embarcan en una búsqueda heroica para exponer sus secretos.
 
                     </p>
                 </div>
@@ -204,48 +229,14 @@
             <!--Más peliculas-->
             <div class="box-2">
                 <div class="content">
-                    <img src="images-pelis/13.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie11.jpg" alt="">
+                    <h3>Arcane</h3>
+                    <p>Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos
+                        opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas.
 
                     </p>
                 </div>
             </div>
-
-            <!--Más peliculas-->
-            <div class="box-2">
-                <div class="content">
-                    <img src="images-pelis/14.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-            <!--Más peliculas-->
-            <div class="box-2">
-                <div class="content">
-                    <img src="images-pelis/15.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-            <!--Más peliculas-->
-            <div class="box-2">
-                <div class="content">
-                    <img src="images-pelis/16.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-
 
         </div>
 
@@ -265,9 +256,10 @@
             <!--Primera pelicula-->
             <div class="box3">
                 <div class="content">
-                    <img src="images-pelis/17.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie12.jpg" alt="">
+                    <h3>Dark</h3>
+                    <p>La desaparición de dos niños muestra los vínculos entre cuatro familias y expone el pasado de una
+                        pequeña ciudad.
 
                     </p>
                 </div>
@@ -276,9 +268,11 @@
             <!--Segunda pelicula-->
             <div class="box-3">
                 <div class="content">
-                    <img src="images-pelis/18.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie13.jpg" alt="">
+                    <h3>Parasyte: los grises</h3>
+                    <p>Cuando unas formas de vida parasitaria no identificadas que subsisten a expensas de los huéspedes
+                        humanos intentan aumentar su poder y empiezan a perturbar a la sociedad, un grupo de humanos
+                        declara la guerra a los invasores.
 
                     </p>
                 </div>
@@ -287,9 +281,10 @@
             <!--Más peliculas-->
             <div class="box-3">
                 <div class="content">
-                    <img src="images-pelis/19.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie14.jpg" alt="">
+                    <h3>Estamos muertos</h3>
+                    <p>Una epidemia mortal estalla en una escuela. Acorralados, los alumnos solo tienen una opción:
+                        luchar con todas sus fuerzas para evitar convertirse en zombis.
 
                     </p>
                 </div>
@@ -298,9 +293,10 @@
             <!--Más peliculas-->
             <div class="box-3">
                 <div class="content">
-                    <img src="images-pelis/20.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie15.jpg" alt="">
+                    <h3>El juego del calamar</h3>
+                    <p>Cientos de personas con dificultades económicas aceptan una extraña invitación a un juego de
+                        supervivencia. Les espera un premio millonario, pero hay mucho en juego.
 
                     </p>
                 </div>
@@ -309,47 +305,27 @@
             <!--Más peliculas-->
             <div class="box-3">
                 <div class="content">
-                    <img src="images-pelis/21.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie16.jpg" alt="">
+                    <h3>Stranger Things</h3>
+                    <p>Cuando un niño desaparece, sus amigos, la familia y la policía se ven envueltos en una serie de
+                        eventos misteriosos al tratar de encontrarlo. Su ausencia coincide con el avistamiento de una
+                        criatura terrorífica y la aparición de una extraña niña.
 
                     </p>
                 </div>
             </div>
 
-            <!--Más peliculas-->
             <div class="box-3">
                 <div class="content">
-                    <img src="images-pelis/22.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <img src="images-pelis/serie16.jpg" alt="">
+                    <h3>Stranger Things</h3>
+                    <p>Cuando un niño desaparece, sus amigos, la familia y la policía se ven envueltos en una serie de
+                        eventos misteriosos al tratar de encontrarlo. Su ausencia coincide con el avistamiento de una
+                        criatura terrorífica y la aparición de una extraña niña.
 
                     </p>
                 </div>
             </div>
-
-            <!--Más peliculas-->
-            <div class="box-3">
-                <div class="content">
-                    <img src="images-pelis/23.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
-            <!--Más peliculas-->
-            <div class="box-3">
-                <div class="content">
-                    <img src="images-pelis/24.jpg" alt="">
-                    <h3>Serie hd</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-
-                    </p>
-                </div>
-            </div>
-
 
 
         </div>
@@ -363,15 +339,21 @@
         <h3>Cinesonoro</h3>
 
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Películas</a></li>
-            <li><a href="#"><s>Series</s></a></li>
-            <li><a href="#">Suscripción</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="peliculas.html">Películas</a></li>
+            <li><a href="series.html"><s>Series</s></a></li>
+            <li><a href="suscribete.html">Suscripción</a></li>
         </ul>
 
     </footer>
 
+    <!--Inicio del Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
 
+
+
+    <script src="peliculas.js"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>
